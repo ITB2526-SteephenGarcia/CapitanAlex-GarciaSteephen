@@ -40,3 +40,52 @@ nav {
 .nav-links a:hover {
     color: #111;
 }
+
+.contenedor-redondeado {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seccion {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer; /* Indica que es clickeable */
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto hover - ampliación y sombreado */
+.seccion:hover {
+    transform: scale(1.05); /* Amplía al 105% */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más prominente */
+}
+
+/* Efecto al hacer clic */
+.seccion:active {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.seccion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Opcional: también ampliar la imagen */
+.seccion:hover img {
+    transform: scale(1.03);
+}
+
+.seccion p {
+    line-height: 1.6;
+    color: #333;
+}
