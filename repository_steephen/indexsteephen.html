@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Minimalist Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,8 +15,6 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
                 <div class="social-links">
                     <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
                         <svg class="linkedin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,45 +109,84 @@
                     <div class="content-wrapper" data-section="projects">
                         <section>
                             <h2>Proyectos</h2>
-                            <div class="projects-grid">
-                                <div class="project-card">
-                                    <h3>Proyecto One</h3>
-                                    <p>Una aplicación web moderna que resuelve problemas complejos con una interfaz simple y elegante.</p>
+                            
+                            <!-- Project 1 -->
+                            <div class="about-container" style="margin-bottom: 60px;">
+                                <div class="about-text">
+                                    <h3>E-Commerce Platform</h3>
+                                    <p>Plataforma completa de comercio electrónico con gestión de inventario en tiempo real, procesamiento de pagos seguro y panel de administración avanzado.</p>
+                                    <p>Tecnologías: React, Node.js, MongoDB, Stripe API, AWS.</p>
                                 </div>
-                                <div class="project-card">
-                                    <h3>Proyecto Two</h3>
-                                    <p>Diseño minimalista enfocado en la experiencia del usuario y la funcionalidad intuitiva.</p>
-                                </div>
-                                <div class="project-card">
-                                    <h3>Proyecto Three</h3>
-                                    <p>Sistema de diseño completo implementado con las mejores prácticas de la industria.</p>
+                                <div class="server-container">
+                                    <div class="server">
+                                        <div class="server-panel">
+                                            <div class="server-lights">
+                                                <div class="light green"></div>
+                                                <div class="light green"></div>
+                                                <div class="light amber"></div>
+                                            </div>
+                                            <div class="server-slots">
+                                                <div class="slot"></div>
+                                                <div class="slot"></div>
+                                                <div class="slot"></div>
+                                            </div>
+                                        </div>
+                                        <div class="server-panel">
+                                            <div class="server-lights">
+                                                <div class="light green"></div>
+                                                <div class="light green"></div>
+                                                <div class="light green"></div>
+                                            </div>
+                                            <div class="server-slots">
+                                                <div class="slot"></div>
+                                                <div class="slot"></div>
+                                                <div class="slot"></div>
+                                            </div>
+                                        </div>
+                                        <div class="server-panel">
+                                            <div class="server-lights">
+                                                <div class="light green"></div>
+                                                <div class="light amber"></div>
+                                                <div class="light green"></div>
+                                            </div>
+                                            <div class="server-slots">
+                                                <div class="slot"></div>
+                                                <div class="slot"></div>
+                                                <div class="slot"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </section>
-                    </div>
-                </div>
 
-                <!-- Resume Section -->
-                <div class="content-section" id="resume">
-                    <div class="content-wrapper" data-section="resume">
-                        <section>
-                            <h2>Curriculum</h2>
-                            <div class="project-card">
-                                <h3>Experiencia Profesional</h3>
-                                <p>Con más de X años de experiencia en diseño y desarrollo, he trabajado con empresas líderes creando productos digitales que marcan la diferencia.</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <!-- Contact Section -->
-                <div class="content-section" id="contact">
-                    <div class="content-wrapper" data-section="contact">
-                        <section>
-                            <h2>Contacto</h2>
-                            <div class="project-card">
-                                <h3>Trabajemos juntos</h3>
-                                <p>¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas. Contáctame a través de LinkedIn o GitHub.</p>
+                            <!-- Project 2 -->
+                            <div class="about-container">
+                                <div class="about-text">
+                                    <h3>AI Task Manager</h3>
+                                    <p>Aplicación de gestión de tareas inteligente que utiliza IA para priorizar automáticamente, sugerir deadlines y optimizar tu productividad.</p>
+                                    <p>Tecnologías: Vue.js, Python, TensorFlow, PostgreSQL, Docker.</p>
+                                </div>
+                                <div class="code-container">
+                                    <div class="code-editor">
+                                        <div class="editor-header">
+                                            <div class="editor-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="editor-title">app.py</div>
+                                        </div>
+                                        <div class="editor-content">
+                                            <div class="code-line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div>
+                                            <div class="code-line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</div>
+                                            <div class="code-line"></div>
+                                            <div class="code-line"><span class="keyword">def</span> <span class="function">predict_priority</span>():</div>
+                                            <div class="code-line">    <span class="keyword">return</span> model.predict()</div>
+                                            <div class="code-line"></div>
+                                            <div class="code-line"><span class="comment"># Running AI engine...</span></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -283,14 +320,35 @@
 
             drawFrame(scrollProgress);
 
+            // Detect scroll direction
+            const currentScrollPos = window.pageYOffset;
+            const scrollingDown = currentScrollPos > (window.lastScrollPos || 0);
+            window.lastScrollPos = currentScrollPos;
+
             // Activate content sections with smoother triggering
             const contentWrappers = document.querySelectorAll('.content-wrapper');
             contentWrappers.forEach(wrapper => {
                 const wrapperRect = wrapper.getBoundingClientRect();
                 const triggerPoint = viewportHeight * 0.75;
                 
-                if (wrapperRect.top < triggerPoint) {
-                    wrapper.classList.add('active');
+                if (wrapperRect.top < triggerPoint && wrapperRect.bottom > 0) {
+                    if (!wrapper.classList.contains('active')) {
+                        wrapper.classList.add('active');
+                        
+                        // Add scroll direction animation
+                        if (scrollingDown) {
+                            wrapper.classList.add('scroll-up');
+                            wrapper.classList.remove('scroll-down');
+                        } else {
+                            wrapper.classList.add('scroll-down');
+                            wrapper.classList.remove('scroll-up');
+                        }
+                        
+                        // Remove animation class after animation completes
+                        setTimeout(() => {
+                            wrapper.classList.remove('scroll-up', 'scroll-down');
+                        }, 800);
+                    }
                 }
             });
         }
